@@ -9,8 +9,8 @@ code snippets.
 
 ## Table of Contents
 
-1. [Lab 1: Create a hello world](tree/lab-1)
-2. [Lab 2: Create a Leap Year Checker](tree/lab-2)
+1. [Lab 1: Create a hello world](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-1)
+2. [Lab 2: Create a Leap Year Checker](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-2)
 3. To be published.
 
 ## Lab 2 - Checkes if a given year is leap year or not.
