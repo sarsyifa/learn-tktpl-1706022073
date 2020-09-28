@@ -2,18 +2,79 @@ package id.ac.ui.cs.mobileprogramming.syifa.lab1;
 
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    static class Number {
+        int number;
+
+        public Number (int input) {
+
+            this.number = input;
+        }
+
+        public boolean isLeapYear() {
+            int year = number;
+            if(year % 4 == 0)
+            {
+                if( year % 100 == 0)
+                {
+                    // year is divisible by 400, hence the year is a leap year
+                    if ( year % 400 == 0)
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                    return true;
+            }
+            else
+                return false;
+        }
+    }
+
+    public static boolean isNumeric(String str) {
+        try {
+            int d = Integer.parseInt(str);
+        } catch (NumberFormatException | NullPointerException nfe) {
+            return false;
+        }
+        return true;
+    }
+
+    public void checkNumber(View view) {
+        Log.i("Log info", "button pressed");
+        EditText editText = (EditText) findViewById(R.id.inputText);
+        String message;
+        if (isNumeric(editText.getText().toString())) {
+            message = editText.getText().toString();
+            if (editText.getText().toString().length() != 4 ){
+                message += " is not a year.";
+            } else {
+                Number input = new Number(Integer.parseInt(editText.getText().toString()));
+                if (input.isLeapYear()) {
+                    message += " is a leap year!";
+                } else {
+                    message += " is not a leap year.";
+                }
+            }
+        }
+        else if (editText.getText().toString().isEmpty()) {
+            message = "Please enter a year";
+        }
+        else {
+            message = "Your input isn't a number";
+        }
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,36 +82,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Under Construction", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
