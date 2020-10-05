@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         Log.d("onCreate, seconds", Integer.toString(seconds));
         Log.d("onCreate, running", Boolean.toString(running));
 
+        if (savedInstanceState != null) {
+            this.seconds = savedInstanceState.getInt("seconds");
+            this.running = savedInstanceState.getBoolean("running");
+        }
         activateTimer();
     }
 
@@ -144,4 +148,19 @@ public class MainActivity extends AppCompatActivity {
         Log.d("onDestroy, running", Boolean.toString(running));
     }
 
+    /**
+     * Save the state of the stopwatch if the activity is no longer visible
+     * and the timer keeps running.
+     *
+     */
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("seconds", this.seconds);
+        outState.putBoolean("running", this.running);
+
+        Log.d("onSaveInstanceState, seconds", Integer.toString(seconds));
+        Log.d("onSaveInstanceState, running", Boolean.toString(running));
+    }
 }
