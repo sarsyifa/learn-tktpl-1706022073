@@ -38,6 +38,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method gets called when the Back button is pressed.
+     * The activity is finishing or being destroyed by the system.
+     *
+     */
+    @Override
+    public void onBackPressed() {
+        Log.d("onBackPressed, seconds", Integer.toString(seconds));
+        Log.d("onBackPressed, running", Boolean.toString(running));
+
+        AlertDialog.Builder alert_builder = new AlertDialog.Builder(this);
+            alert_builder.setIconAttribute(android.R.attr.alertDialogIcon)
+                .setTitle("Lab 3")
+                .setMessage("Are you sure you want to exit? " +
+                        "All progress in this session will be lost")
+                .setPositiveButton("Exit", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+
+                })
+                .setNegativeButton("No", null)
+                .show()
+                        .getButton(DialogInterface.BUTTON_POSITIVE)
+                        .setTextColor(getResources().getColor(R.color.stopButton));
+
+    }
+
+    /**
      * Sets the Number of seconds on the timer.
      * The activateTimer() method uses a Handler to increment the seconds and update the text view.
      *
