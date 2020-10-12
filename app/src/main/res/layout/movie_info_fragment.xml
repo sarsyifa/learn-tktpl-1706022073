@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_info_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <TextView
+        android:id="@+id/page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/movie_info_page_title"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/movie_info_title_label"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/movie_director"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_info_director_label"
+        android:textAlignment="textStart"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_title"></TextView>
+
+    <TextView
+        android:id="@+id/movie_writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_info_writers_label"
+        android:textAlignment="textStart"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/movie_director"
+        app:layout_constraintStart_toStartOf="@+id/movie_director"
+        app:layout_constraintTop_toBottomOf="@+id/movie_director"></TextView>
+
+    <TextView
+        android:id="@+id/movie_cast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_info_writers_label"
+        android:textAlignment="textStart"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/movie_writer"
+        app:layout_constraintStart_toStartOf="@+id/movie_writer"
+        app:layout_constraintTop_toBottomOf="@+id/movie_writer"></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
