@@ -5,7 +5,7 @@
     android:id="@+id/movie_info_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   >
+    tools:context=".MovieInfoFragment">
 
     <TextView
         android:id="@+id/page_title"
