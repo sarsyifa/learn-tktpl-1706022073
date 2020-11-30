@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="id.ac.ui.cs.mobileprogramming.syifa.lab1.MainActivity">
     <item
+        android:id="@+id/action_post"
+        android:orderInCategory="100"
+        android:title="@string/post_btn"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
