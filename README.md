@@ -14,7 +14,7 @@ code snippets.
 3. [Lab 3: Create a Stopwatch](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-3)
 4. [Lab 4: Create a simple MVVM (My Movies) ](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-4)
 5. [Lab 5: Create a simple wifi scanner](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-5)
-6. [Lab 5: Create a simole native code](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-6)
+6. [Lab 5: Create a simple native code](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-6)
 7. To be published.
 
 ## Lab 6 - Implement OpenGL ES, Android NDK, and JNI
