@@ -14,8 +14,8 @@ code snippets.
 3. [Lab 3: Create a Stopwatch](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-3)
 4. [Lab 4: Create a simple MVVM (My Movies) ](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-4)
 5. [Lab 5: Create a simple wifi scanner](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-5)
-6. [Lab 5: Create a simple native code](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-6)
-7. [Lab 5: Create a simple app using cross-platform frameworks](https://github.com/sarsyifa/tktpl-lab7-1706022073)
+6. [Lab 6: Create a simple native code](https://github.com/sarsyifa/learn-tktpl-1706022073/tree/lab-6)
+7. [Lab 7: Create a simple app using cross-platform frameworks](https://github.com/sarsyifa/tktpl-lab7-1706022073)
 8. To be published.
 
 ## Lab 7 - Android Native vs Cross-platform
